@@ -1,0 +1,285 @@
+@charset "UTF-8";
+body, html, .main {
+  font-family: "Calibri";
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  background-image: url("./images/фон1920.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section {
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.logo {
+  margin: 20px 0 25px 0;
+}
+
+.info {
+  height: 440px;
+  width: 956px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.41);
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.info > * {
+  margin-left: 40px;
+}
+
+.firstText, .secondText {
+  width: 660px;
+  margin-top: 0;
+}
+
+.firstText {
+  color: #5c886a;
+}
+
+.secondText {
+  color: #6c6c6c;
+  font-size: 24px;
+}
+
+.links > a {
+  text-decoration: none;
+  border-radius: 30px;
+  border: 1px solid white;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 16.67px;
+  height: 60px;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  align-items: center;
+  -webkit-box-shadow: 0 8px 9px 0px rgba(0, 0, 0, 0.21);
+          box-shadow: 0 8px 9px 0px rgba(0, 0, 0, 0.21);
+}
+
+.links > a:hover {
+  cursor: default;
+  border: 1px solid red;
+}
+
+.links > a > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+
+.links > a > img {
+  margin-right: 7px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.viber {
+  background-color: #9457ad;
+  width: 328px;
+}
+
+.vk {
+  background-color: #61a0be;
+  width: 221px;
+}
+
+.form {
+  width: 463px;
+  height: 630px;
+  background-image: url("./images/фонФорма.png");
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border: 9px solid white;
+  border-top: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.form > a {
+  text-decoration: none;
+  border-radius: 20px;
+  border: 1px solid white;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 177px;
+  background-color: rgba(255, 255, 255, 0.22);
+  font-size: 16px;
+}
+
+.form > a:hover {
+  cursor: default;
+  border: 1px solid red;
+}
+
+.form > p {
+  font-size: 16px;
+}
+
+.submit {
+  text-decoration: none;
+  border-radius: 30px;
+  border: 1px solid white;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #dd3575;
+  font-size: 16.67px;
+}
+
+.submit:hover {
+  cursor: default;
+  border: 1px solid red;
+}
+
+.inner-form {
+  height: 504px;
+  border: 2px solid white;
+  border-radius: 30px;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.inner-form > * {
+  margin: 0 60px;
+}
+
+.inner-form > p {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.inner-form > p:first-child {
+  width: 191px;
+  margin-top: 50px;
+}
+
+.inner-form > p:nth-child(2) {
+  width: 199px;
+  height: 44px;
+  font-size: 16.67px;
+}
+
+.inner-form > div > input, .inner-form > div a {
+  height: 60px;
+  border-radius: 30px;
+  width: 95%;
+}
+
+.inner-form > div > input {
+  margin-bottom: 15px;
+}
+
+input::-webkit-input-placeholder {
+  color: black;
+  padding-left: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+input:-ms-input-placeholder {
+  color: black;
+  padding-left: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+input::-ms-input-placeholder {
+  color: black;
+  padding-left: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+input::placeholder {
+  color: black;
+  padding-left: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+/*# sourceMappingURL=styles.css.map */

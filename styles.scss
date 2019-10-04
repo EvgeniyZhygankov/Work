@@ -1,0 +1,201 @@
+
+@mixin font() {
+    font-family: "Calibri";
+    font-size: 28px;
+    font-weight: bold; 
+    color: white;     
+}
+
+@mixin button($radius) {
+    text-decoration: none;
+    border-radius: $radius;
+    border: 1px solid white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        cursor: default;
+        border: 1px solid red;
+    }
+}
+
+$clGreen: #5c886a;
+$clGrey: #6c6c6c;
+$clViber: #9457ad;
+$clVk: #61a0be;
+$clPink: #dd3575;
+
+body, html, .main {
+    @include font();
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    background-image: url("./images/фон1920.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 90%;
+    height: 100%;
+    // height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin: 20px 0 25px 0;
+}
+
+.info {
+    height: 440px;
+    width: 956px;
+    border: 2px solid white;
+    background-color: rgba($color: white, $alpha: 0.41);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    > * {
+        margin-left: 40px;
+    }
+}
+
+.firstText, .secondText {
+    width: 660px;
+    margin-top: 0;
+}
+
+.firstText {
+    color: $clGreen;
+}
+
+.secondText {
+    color: $clGrey;
+    font-size: 24px;
+}
+
+.links {
+    > a {
+        @include button(30px);
+        color: white;
+        font-size: 16.67px;
+        height: 60px;
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-shadow: 0 8px 9px 0px rgba($color: #000000, $alpha: 0.21);
+        > p {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            width: 100%;
+        }
+        > img {
+            margin-right: 7px;
+            flex-shrink: 1;
+        }
+    }
+}
+
+.viber {
+    background-color: $clViber;
+    width: 328px;
+}
+
+.vk {
+    background-color: $clVk;
+    width: 221px;
+}
+
+.form {
+    width: 463px;
+    height: 630px;
+    background-image: url("./images/фонФорма.png");
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border: 9px solid white;
+    border-top: 0;
+    align-self: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    > a {
+        @include button(20px);
+        height: 40px;
+        width: 177px;
+        background-color: rgba($color: #ffffff, $alpha: 0.22);
+        font-size: 16px;
+    }
+    > p {
+        font-size: 16px;
+    }
+}
+
+.submit {
+    @include button(30px);
+    background-color: $clPink;
+    font-size: 16.67px;
+}
+
+.inner-form {
+    height: 504px;
+    border: 2px solid white;
+    border-radius: 30px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-self: flex-end;
+    > * {
+        margin: 0 60px;
+    }
+    > p {
+        align-self: flex-start;
+    }
+    > p:first-child {
+        width: 191px;
+        margin-top: 50px;
+    }
+    > p:nth-child(2) {
+        width: 199px;
+        height: 44px;
+        font-size: 16.67px;
+    }
+    > div {
+        > input, a {
+            height: 60px;
+            border-radius: 30px;
+            width: 95%; 
+            
+        }
+        > input {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+input::placeholder {
+    color: black;
+    padding-left: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media(max-width:2560px) {
+
+
+}
+
+@media(max-width: 375px) {
+
+
+}
