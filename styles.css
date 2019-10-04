@@ -18,9 +18,9 @@ body, html, .main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 section {
@@ -38,6 +38,18 @@ section {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  top: 200px;
+  left: 550px;
+}
+
+.slider img {
+  height: 650px !important;
+  width: 750px !important;
 }
 
 .logo {
@@ -246,39 +258,37 @@ section {
 }
 
 .inner-form > div > input, .inner-form > div a {
-  height: 60px;
+  height: 56px;
   border-radius: 30px;
   width: 95%;
 }
 
 .inner-form > div > input {
   margin-bottom: 15px;
+  padding-left: 20px;
+  font-size: 16.67px;
 }
 
 input::-webkit-input-placeholder {
   color: black;
-  padding-left: 20px;
   font-weight: bold;
   font-style: italic;
 }
 
 input:-ms-input-placeholder {
   color: black;
-  padding-left: 20px;
   font-weight: bold;
   font-style: italic;
 }
 
 input::-ms-input-placeholder {
   color: black;
-  padding-left: 20px;
   font-weight: bold;
   font-style: italic;
 }
 
 input::placeholder {
   color: black;
-  padding-left: 20px;
   font-weight: bold;
   font-style: italic;
 }

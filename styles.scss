@@ -37,7 +37,7 @@ body, html, .main {
     background-image: url("./images/фон1920.png");
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 section {
@@ -48,6 +48,17 @@ section {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.slider {
+    position: absolute;
+    top: 200px;
+    left: 550px;
+    img {
+        height: 650px !important;
+        width: 750px !important;
+    }
 }
 
 .logo {
@@ -172,20 +183,21 @@ section {
     }
     > div {
         > input, a {
-            height: 60px;
+            height: 56px;
             border-radius: 30px;
             width: 95%; 
             
         }
         > input {
             margin-bottom: 15px;
+            padding-left: 20px;
+            font-size: 16.67px;
         }
     }
 }
 
 input::placeholder {
     color: black;
-    padding-left: 20px;
     font-weight: bold;
     font-style: italic;
 }
