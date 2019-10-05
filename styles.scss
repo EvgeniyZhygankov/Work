@@ -25,6 +25,7 @@ $clGrey: #6c6c6c;
 $clViber: #9457ad;
 $clVk: #61a0be;
 $clPink: #dd3575;
+$boxShadow: 0 8px 9px 0px rgba($color: #000000, $alpha: 0.21);
 
 body, html, .main {
     @include font();
@@ -57,8 +58,9 @@ section {
 
 .slider {
     position: absolute;
-    top: 200px;
-    left: 550px;
+    top: 220px;
+    right: 400px;
+    width: 750px !important;
     img {
         height: 650px !important;
         width: 750px !important;
@@ -109,7 +111,7 @@ section {
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
-        box-shadow: 0 8px 9px 0px rgba($color: #000000, $alpha: 0.21);
+        box-shadow: $boxShadow;
         > p {
             display: flex;
             justify-content: center;
@@ -265,9 +267,79 @@ input::placeholder {
 
 @media(min-width: 375px) and (max-width: 1900px) {
 
+    body {
+        font-size: 31.25vh;
+    }
+    section {
+        width: 100%;
+        // width: 95%;
+        padding: 40px;
+        max-width: 100%;
+    }
+
+    .logo {
+        background-image: url("images/logoSmall.png");
+        width: 136px;
+        height: 105px;
+        position: absolute;
+        margin: 0;
+        // top: 60px;
+        // left: 60px;
+    }
+
+    .info {
+
+        border: 0;
+        background: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-grow: 1;
+        // max-height: 50%;
+    }
+
+    .firstText, .secondText {
+
+        flex: 0 2 auto;
+        max-width: 50%;
+        min-width: 1px;
+        margin-left: 0;
+    }
+
+    .links {
+        order: -1;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 140px;
+    }
+
+    .slider {
+        position: absolute;
+        right: 0px;
+        width: 375px !important;
+        img {
+            width: 375px !important;
+            height: 537px !important;
+        }
+        .carousel-inner {
+            > div:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+
     .form {
         border: 0;
         background: 0;
+        width: auto;
+        height: auto;
+        align-self: center;
+        position: absolute;
+        bottom: 40px;
         > *:not(.inner-form) {
             display: none;
         }
@@ -275,20 +347,29 @@ input::placeholder {
     
     .inner-form {
         border: 0;
+        width: auto;
+        height: auto;
         > *:not(div) {
             display: none;
         }
         > div {
+            margin: 0;
             > *:not(.submit) {
                 display: none;
+            }
+            > a {
+                padding: 0;
             }
         }
     }
 
     .submit {
-        position: absolute;
-        bottom: 40px;
-        left: 50%;
+        padding-left: 0px;
+        box-shadow: $boxShadow;
+    }
+
+    .leftLeaf, .bigLeftLeaf, .rightLeaf {
+        display: none;
     }
 
     .youtube {
