@@ -345,6 +345,7 @@ input::placeholder {
 @media (min-width: 2560px) {
   .main {
     background-repeat: round;
+    background-position: top left;
   }
   .bigLeftLeaf, .rightLeaf {
     bottom: 180px;
