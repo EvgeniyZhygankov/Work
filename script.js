@@ -3,7 +3,8 @@ window.onload = qwe();
 window.addEventListener("resize", qwe);
 
 function qwe() {
-    
+    alert(`Ширина ${window.innerWidth}
+            Высота ${window.innerHeight}`);
     console.log("in")
     let SRCsSmall = [
         "images/slide-man-small.png",
