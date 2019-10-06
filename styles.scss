@@ -58,22 +58,31 @@ section {
 .leftSide {
     display: flex;
     flex-direction: column;
+    width: 60%;
 }
 
 .rightSide {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 40%;
 }
+
+$sizeImg: 30vw;
 
 .slider {
     position: absolute;
-    top: 220px;
-    right: 400px;
-    width: 750px !important;
+    top: 350px;
+    right: 26%;
+    max-width: 650px;
+    max-height: 559px;
+    width: 65vw;
+    &:hover {
+        background: black;
+    }
     img {
-        height: 650px !important;
-        width: 750px !important;
+        max-width: 750px;
+        max-height: 650px;
     }
 }
 
@@ -86,7 +95,7 @@ section {
 
 .info {
     height: 440px;
-    width: 956px;
+    width: 100%;
     border: 2px solid white;
     background-color: rgba($color: white, $alpha: 0.41);
     border-radius: 30px;
@@ -129,7 +138,7 @@ section {
             width: 100%;
         }
         > img {
-            margin-right: 7px;
+            margin: 7px 7px 7px 0;
             flex-shrink: 1;
         }
     }
@@ -146,14 +155,14 @@ section {
 }
 
 .form {
-    width: 463px;
+    width: 70%;
     height: 630px;
     background-image: url("./images/фонФорма.png");
+    background-position: center center;
     border-bottom-right-radius: 40px;
     border-bottom-left-radius: 40px;
     border: 9px solid white;
     border-top: 0;
-    // align-self: flex-end;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -177,16 +186,17 @@ section {
 }
 
 .inner-form {
+    align-self: flex-end;
     height: 504px;
     border: 2px solid white;
     border-radius: 30px;
     width: 95%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-self: flex-end;
-    > * {
-        margin: 0 60px;
+    justify-content: space-around;
+    > *:not(div) {
+        margin-left: 5%;
     }
     > p {
         align-self: flex-start;
@@ -201,10 +211,15 @@ section {
         font-size: 16.67px;
     }
     > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         > input, a {
             height: 56px;
             border-radius: 30px;
-            width: 326px;
+            width: 90%;
             padding-left: 20px;
         }
         > input {
@@ -222,12 +237,9 @@ input::placeholder {
 
 .youtube {
     align-self: flex-end;
-    // width: fit-content;
-    // display: inline-flex;
     display: flex;
     align-items: flex-end;
     margin-top: 50px;
-    // margin-right: 0;
     > P {
         font-size: 14px;
         flex-shrink: 1;
@@ -257,6 +269,7 @@ input::placeholder {
     display: none;
 }
 
+
 @media(min-width:2560px) {
 
     .main {
@@ -280,15 +293,9 @@ input::placeholder {
 }
 
 @media (max-width: 1900px) {
-
     
-    // body {
-    //     font-size: 31.25vh;
-    // }
-
     section {
         width: 100%;
-        // width: 95%;
         padding: 40px;
         max-width: 100%;
         flex-direction: column;
@@ -306,8 +313,6 @@ input::placeholder {
         height: 105px;
         position: absolute;
         margin: 0;
-        // top: 60px;
-        // left: 60px;
     }
 
     .info {
@@ -320,7 +325,6 @@ input::placeholder {
         flex-direction: column;
         justify-content: flex-start;
         flex-grow: 1;
-        // max-height: 50%;
     }
 
     .firstText, .secondText {
@@ -383,16 +387,49 @@ input::placeholder {
             }
             > a {
                 padding: 0;
+                padding-left: 0px;
+                box-shadow: $boxShadow;
+                width: 375px;
+                height: 56px;
             }
         }
     }
 
-    .submit {
-        padding-left: 0px;
-        box-shadow: $boxShadow;
-    }
-
     .leftLeaf, .bigLeftLeaf, .rightLeaf, .youtube {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .firstText, .secondText {
+        font-size: 16px;
+    }
+
+    .links {
+        justify-content: flex-start;
+        a {
+            height: 36px;
+            font-size: 12px;
+        }
+        img {
+            height: 28px;
+            width: 28px;
+            margin: 4px 4px 4px 0 !important;
+            flex-shrink: 0 !important;
+        }
+    } 
+
+    .viber {
+        width: 187px;
+        margin-bottom: 15px;
+    }
+
+    .vk {
+        width: 140px;
     }
 }

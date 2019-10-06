@@ -22,7 +22,7 @@ function qwe() {
         console.log(imgs);
         imgs[0].setAttribute("src", SRCsSmall[0]);
         imgs[1].setAttribute("src", SRCsSmall[1]);
-        carousel_inner.childNodes[2].className = "carousel-item";
+        carousel_inner.childNodes[2].className = "";
     }
     else {
         imgs.forEach((img, index) => {
