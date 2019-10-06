@@ -32,28 +32,38 @@ body, html, .main {
     margin: 0;
     padding: 0;
     width: 100%;
+    // min-height: 1080px;
     height: 100%;
 }
 
 .main {
+    // min-height: 100%;
     background-image: url("./images/фон2560.png");
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
 }
 
 section {
     width: 90%;
     max-width: 1737px;
     height: 100%;
-    // height: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.leftSide {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    position: relative;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .slider {
@@ -143,7 +153,7 @@ section {
     border-bottom-left-radius: 40px;
     border: 9px solid white;
     border-top: 0;
-    align-self: flex-end;
+    // align-self: flex-end;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -212,9 +222,12 @@ input::placeholder {
 
 .youtube {
     align-self: flex-end;
+    // width: fit-content;
+    // display: inline-flex;
     display: flex;
     align-items: flex-end;
     margin-top: 50px;
+    // margin-right: 0;
     > P {
         font-size: 14px;
         flex-shrink: 1;
@@ -278,6 +291,13 @@ input::placeholder {
         // width: 95%;
         padding: 40px;
         max-width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .leftSide {
+        width: 100%;
     }
 
     .logo {
@@ -295,6 +315,7 @@ input::placeholder {
         border: 0;
         background: 0;
         width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -371,11 +392,7 @@ input::placeholder {
         box-shadow: $boxShadow;
     }
 
-    .leftLeaf, .bigLeftLeaf, .rightLeaf {
-        display: none;
-    }
-
-    .youtube {
+    .leftLeaf, .bigLeftLeaf, .rightLeaf, .youtube {
         display: none;
     }
 }

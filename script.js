@@ -18,7 +18,7 @@ function qwe() {
     let imgs = document.querySelectorAll(".d-block");
     
     console.log(window.innerWidth);
-    if (window.innerWidth < 1920) {
+    if (window.innerWidth < 1900) {
         console.log(imgs);
         imgs[0].setAttribute("src", SRCsSmall[0]);
         imgs[1].setAttribute("src", SRCsSmall[1]);

@@ -13,7 +13,7 @@ body, html, .main {
 
 .main {
   background-image: url("./images/фон2560.png");
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,9 +21,6 @@ body, html, .main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 section {
@@ -33,16 +30,36 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+.leftSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: relative;
+}
+
+.rightSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .slider {
@@ -165,8 +182,6 @@ section {
   border-bottom-left-radius: 40px;
   border: 9px solid white;
   border-top: 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,6 +380,19 @@ input::placeholder {
     width: 100%;
     padding: 40px;
     max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .leftSide {
+    width: 100%;
   }
   .logo {
     background-image: url("images/logoSmall.png");
@@ -377,6 +405,7 @@ input::placeholder {
     border: 0;
     background: 0;
     width: 100%;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -468,10 +497,7 @@ input::placeholder {
     -webkit-box-shadow: 0 8px 9px 0px rgba(0, 0, 0, 0.21);
             box-shadow: 0 8px 9px 0px rgba(0, 0, 0, 0.21);
   }
-  .leftLeaf, .bigLeftLeaf, .rightLeaf {
-    display: none;
-  }
-  .youtube {
+  .leftLeaf, .bigLeftLeaf, .rightLeaf, .youtube {
     display: none;
   }
 }
