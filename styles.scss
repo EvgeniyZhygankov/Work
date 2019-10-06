@@ -266,11 +266,13 @@ input::placeholder {
     }
 }
 
-@media(min-width: 375px) and (max-width: 1900px) {
+@media (max-width: 1900px) {
 
-    body {
-        font-size: 31.25vh;
-    }
+    
+    // body {
+    //     font-size: 31.25vh;
+    // }
+
     section {
         width: 100%;
         // width: 95%;

@@ -360,10 +360,7 @@ input::placeholder {
   }
 }
 
-@media (min-width: 375px) and (max-width: 1900px) {
-  body {
-    font-size: 31.25vh;
-  }
+@media (max-width: 1900px) {
   section {
     width: 100%;
     padding: 40px;
