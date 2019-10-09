@@ -25,6 +25,10 @@
     }
 }
 
+@function Scale($width) {
+    @return $width / 1.323;
+}
+
 $clGreen: #5c886a;
 $clGrey: #6c6c6c;
 $clViber: #9457ad;
@@ -34,8 +38,6 @@ $boxShadow: 0 8px 9px 0px rgba($color: #000000, $alpha: 0.21);
 
 $SliderWidth: (108000px / 840px);
 $SliderHeight: (108000px / 730);
-
-$indexScale: 1080 / 937;
 
 body, html, .main {
     @include font();
@@ -69,17 +71,16 @@ section {
     display: flex;
     flex-direction: column;
     padding-top: 43px;
-    flex: 0 1 960px;
+    flex: 0 1 55.26%;
 }
 
 .rightSide {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    flex: 0 1 483px;
+    // flex: 0 1 21.85vw;
+    flex: 0 1 27.8%;
 }
-
-// $sizeImg: 30vw;
 
 .slider {
     position: absolute;
@@ -165,7 +166,10 @@ section {
 }
 
 .form {
-    height: 639px;
+    max-height: 639px;
+    max-width: 483px;
+    height: 59.2vh;
+    // width: 21.85vw;
     width: 100%;
     background-image: url("./images/фонФорма.png");
     background-position: top left;

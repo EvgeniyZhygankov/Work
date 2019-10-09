@@ -52,8 +52,8 @@ section {
           flex-direction: column;
   padding-top: 43px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 960px;
-          flex: 0 1 960px;
+      -ms-flex: 0 1 55.26%;
+          flex: 0 1 55.26%;
 }
 
 .rightSide {
@@ -68,8 +68,8 @@ section {
       -ms-flex-align: end;
           align-items: flex-end;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 483px;
-          flex: 0 1 483px;
+      -ms-flex: 0 1 27.8%;
+          flex: 0 1 27.8%;
 }
 
 .slider {
@@ -205,7 +205,9 @@ section {
 }
 
 .form {
-  height: 639px;
+  max-height: 639px;
+  max-width: 483px;
+  height: 59.2vh;
   width: 100%;
   background-image: url("./images/фонФорма.png");
   background-position: top left;
