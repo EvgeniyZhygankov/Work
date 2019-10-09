@@ -135,12 +135,15 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 562px;
+          flex: 0 1 562px;
 }
 
 .links > a {
@@ -178,10 +181,9 @@ section {
 .links > a > p {
   margin: 0;
   text-align: center;
-  padding: 0 25px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+      -ms-flex: 1 1;
+          flex: 1 1;
 }
 
 .links > a > img {
