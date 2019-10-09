@@ -50,10 +50,10 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 960px;
   padding-top: 43px;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 960px;
+          flex: 0 1 960px;
 }
 
 .rightSide {
@@ -105,21 +105,30 @@ section {
   -webkit-box-flex: 0;
       -ms-flex: 0 2 100%;
           flex: 0 2 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .firstText, .secondText {
-  width: 100%;
-  max-width: 660px;
   margin-top: 0;
 }
 
 .firstText {
   color: #5c886a;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 660px;
+          flex: 0 1 660px;
 }
 
 .secondText {
   color: #6c6c6c;
   font-size: 24px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 468px;
+          flex: 0 1 468px;
 }
 
 .links {
@@ -132,7 +141,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 652px;
 }
 
 .links > a {
@@ -170,9 +178,10 @@ section {
 .links > a > p {
   margin: 0;
   text-align: center;
+  padding: 0 25px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 2 auto;
-          flex: 1 2 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .links > a > img {
@@ -181,14 +190,16 @@ section {
 
 .viber {
   background-color: #9457ad;
-  width: 17.2vw;
-  max-width: 330px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 2 330px;
+          flex: 0 2 330px;
 }
 
 .vk {
   background-color: #61a0be;
-  width: 11.6vw;
-  max-width: 223px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 223px;
+          flex: 0 1 223px;
 }
 
 .form {
@@ -211,18 +222,15 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 8px 8px;
 }
 
 .top {
   height: 114px;
-  max-width: 80%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,7 +294,7 @@ section {
   color: white;
   line-height: 1.1 !important;
   background-color: #dd3575;
-  margin-bottom: 5.5vh;
+  margin-bottom: 59px;
   color: white;
 }
 
@@ -306,13 +314,16 @@ section {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border: 2px solid white;
   border-radius: 30px;
 }
 
 .bottom p {
   margin: 0;
-  margin-top: 4.4vh;
+  margin-top: 45px;
 }
 
 .bottom p:first-child {
@@ -324,7 +335,7 @@ section {
   width: 199px;
   height: 44px;
   font-size: 16.67px;
-  margin-bottom: 4.1vh;
+  margin: 40px 0 37px 0;
 }
 
 .bottom-content {
@@ -335,13 +346,11 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   max-width: 74%;
+  height: 100%;
 }
 
 .bottom-content div {
@@ -373,7 +382,6 @@ section {
 
 .bottom-content div input[type="submit"] {
   height: 62px;
-  margin-bottom: 5.5vh;
   padding: 0;
 }
 
