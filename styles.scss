@@ -55,7 +55,7 @@ body, html, .main {
 }
 
 section {
-    width: 89%;
+    // width: 89%;
     max-width: 1737px;
     height: 100%;
     display: flex;
@@ -64,9 +64,6 @@ section {
     position: relative;
     flex-grow: 1;
     margin: 0 10px;
-    // &:hover {
-    //     background: blue;
-    // }
 }
 
 .leftSide {
@@ -218,15 +215,19 @@ section {
     border-top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     padding: 0 8px 8px;
     // flex-shrink: 2;
 }
 
 .top {
     height: 114px;
-    width: 18.4vw;
-    max-width: 354px;
+    // width: 18.4vw;
+    // max-width: 354px;
+    max-width: 80%;
+    flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -289,7 +290,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 0 0 74%;
+    flex: 1 0 auto;
+    max-width: 74%;
     div {
         display: flex;
         flex-direction: column;
