@@ -25,6 +25,7 @@ body, html, .main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 600px;
 }
 
 section {
@@ -679,7 +680,6 @@ input::placeholder {
             align-items: flex-start;
   }
   .leftSide {
-    min-width: 327px;
     min-height: 266px;
     width: 90%;
     height: 40%;
@@ -761,6 +761,24 @@ input::placeholder {
     max-width: 375px;
     height: 80%;
     max-height: 540px;
+  }
+}
+
+@media (max-width: 370px) {
+  .links a p {
+    font-size: 0.8rem;
+  }
+  .viber {
+    width: 150px;
+  }
+  .vk {
+    width: 120px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 992px) {
+  .slider {
+    min-width: 600px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

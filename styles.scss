@@ -61,6 +61,7 @@ body, html, .main {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    min-height: 600px;
 }
 
 section {
@@ -423,6 +424,8 @@ input::placeholder {
     background-color: white;
 }
 
+
+
 @media(min-width:2560px) {
 
     .main {
@@ -508,7 +511,7 @@ input::placeholder {
     }
 
     .leftSide {
-        min-width: 327px;
+        // min-width: 327px;
         min-height: 266px;
         width: 90%;
         height: 40%;
@@ -583,50 +586,28 @@ input::placeholder {
     }
 }
 
-// @media (max-width: 600px) {
+@media (max-width: 370px) {
 
-//     section {
-//         padding: 40px 15px;
-//     }
+    .links {
+        a {
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
 
-//     .slider {
-//         top: 150px;
-//         // height: 350px !important;
-//         // min-height: 350px;
-//         width: 60vw;
-//         img {
-//             max-height: 350px;
-//         }
-//     }
-    
-//     .firstText, .secondText {
-//         font-size: 16px;
-//     }
+    .viber {
+        width: 150px;
+    }
 
-//     .links {
-//         justify-content: flex-start;
-//         a {
-//             height: 36px;
-//             font-size: 12px;
-//         }
-//         img {
-//             height: 28px;
-//             width: 28px;
-//             margin: 4px 4px 4px 0 !important;
-//             flex-shrink: 0 !important;
-//         }
-//     } 
+    .vk {
+        width: 120px;
+    }
+}
 
-//     .viber {
-//         width: 187px;
-//         margin-bottom: 15px;
-//     }
+@media (orientation: portrait) and (min-width: 992px) {
 
-//     .vk {
-//         width: 140px;
-//     }
-
-//     .submit {
-//         width: 340px !important;
-//     }
-// }
+    .slider {
+        min-width: 600px;
+    }
+}

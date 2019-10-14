@@ -24,12 +24,15 @@ function qwe() {
         carousel_items[2].style.display = "none";
     }
     else {
+
         imgs.forEach((img, index) => {
 
             img.setAttribute("src", SRCsNormal[index]);
         });
-
-        carousel_items[2].className = "carousel-item";
-        carousel_items[2].style = undefined;
+        if (!carousel_items[2].classList.contains("active")) {
+        
+            carousel_items[2].className = "carousel-item";
+            carousel_items[2].style = undefined;
+        }
     }
 }
