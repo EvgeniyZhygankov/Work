@@ -1,7 +1,7 @@
 
 @mixin font() {
     font-family: "Calibri";
-    font-size: 28px;
+    // font-size: 28px;
     font-weight: bold; 
     color: white;  
     line-height: 1.1 !important;   
@@ -23,6 +23,9 @@
         cursor: default;
         border: 1px solid red;
     }
+    p {
+        font-size: 1.0625rem; 
+    }
 }
 
 @function Scale($width) {
@@ -39,6 +42,10 @@ $boxShadow: 0 8px 9px 0px rgba($color: #000000, $alpha: 0.21);
 $SliderWidth: (108000px / 840px);
 $SliderHeight: (108000px / 730);
 
+html {
+    font-size: 14px;
+}
+
 body, html, .main {
     @include font();
     margin: 0;
@@ -50,126 +57,167 @@ body, html, .main {
 .main {
     background-image: url("./images/фон2560.png");
     background-position: center top;
-    // background-size: 100% 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
 }
 
 section {
-    max-width: 1737px;
+    max-width: 1728px;
+    max-height: 1100px;
     height: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
-    flex-grow: 1;
-    margin: 0 10px;
+    // flex-grow: 1;
+    // margin: 0 10px;
 }
 
 .leftSide {
     display: flex;
     flex-direction: column;
-    padding-top: 43px;
-    flex: 0 1 55.26%;
+    flex:  0 1 48.125%;
+    height: 100%;
 }
 
 .rightSide {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    // flex: 0 1 21.85vw;
-    flex: 0 1 27.8%;
+    flex: 0 1 24.15%;
+    height: 100%;
 }
 
 .slider {
     position: absolute;
-    bottom: 12%;
+    top: 23%;
     right: 21.5%;
-    width: 47.7%;
+    width: 43.7%;
+    height: 66%;
+    max-height: 713px;
+    max-width: 831px;
+    div {
+        height: 100%;
+    }
     img {
-        width: 100%;
+        height: 100%;
     }
 }
 
 .logo {
-    margin-bottom: 59px;
     background-image: url(images/logo.png);
     background-size: 100% 100%;
     width: 372px;
     height: 144px;
+    margin: 4.5% 0 6.146%;
 }
 
 .info {
+    max-height: 385px;
+    max-width: 832px;
+
+    min-width: 650px;
+    min-height: 273px;
+    height: 41.1%;
+    // width: 100%;
     border: 2px solid white;
     background-color: rgba($color: white, $alpha: 0.41);
     border-radius: 30px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .info-content {
-    padding: 61px 0px 41px 40px;
-    flex: 0 2 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 76.13%;
+    flex: 0 1 87.917%;
+}
+
+.info-content-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // flex: 0 1 172px;
+    height: 59.17%;
+    // height: 200px;
 }
 
 .firstText, .secondText {
-    margin-top: 0;
+    margin: 0;
 }
 
 .firstText {
     color: $clGreen;
-    flex: 0 1 660px;
+    // flex: 0 1 660px;
+    max-width: 660px;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
 }
 
 .secondText {
     color: $clGrey;
     font-size: 24px;
-    flex: 0 1 468px;
+    // flex: 0 1 468px;
+    max-width: 468px;
+    font-size: 1.5rem;
+    // margin-bottom: 25px;
 }
 
 .links {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
-    flex: 0 1 562px;
-    > a {
+    // flex: 0 1 18.34%;
+    height: 18.34%;
+    // max-width: 562px;
+    a {
         @include UseableElem(1);
         @include button(30px);
         color: white;
-        font-size: 16.67px;
-        height: 60px;
+        // height: 60px;
+        height: 100%;
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
         box-shadow: $boxShadow;
-        > p {
+        p {
             margin: 0;
             text-align: center;
             flex: 1 1;
         }
-        > img {
-            margin: 7px 7px 7px 0;
+        img {
+            margin-right: 7px;
+            height: 75.81%;
         }
     }
 }
 
 .viber {
     background-color: $clViber;
-    flex: 0 2 330px;
+    flex: 0 2 38.79%;
+    // width: ;
 }
 
 .vk {
     background-color: $clVk;
-    flex: 0 1 223px;
+    flex: 0 2 26.25%;
+    margin-left: 9px;
 }
 
 .form {
     max-height: 639px;
     max-width: 483px;
+    min-width: 300px;
+    min-height: 415px;
+    // min-height: 500px;
+    // min-height: 397px;
     height: 59.2vh;
-    // width: 21.85vw;
     width: 100%;
     background-image: url("./images/фонФорма.png");
     background-position: top left;
@@ -186,7 +234,9 @@ section {
 }
 
 .top {
-    height: 114px;
+    // height: 114px;
+    height: 17.84%;
+    // height: 100%;
     width: 80%; 
     display: flex;
     flex-wrap: wrap;
@@ -194,10 +244,12 @@ section {
     justify-content: space-between;
     > a {
         @include button(20px);
-        width: 179px;
-        height: 43px;
+        width: 50.56%;
+        // height: 43px;
+        height: 37.72%;
         background-color: rgba($color: #ffffff, $alpha: 0.22);
         font-size: 16px;
+        text-align: center;
     }
     > p {
         font-size: 16px;
@@ -219,12 +271,13 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-    flex-grow: 1;
     border: 2px solid white;
     border-radius: 30px;
+    flex: 1 1 auto;
     p {
         margin: 0;
-        margin-top: 45px;
+        // margin-top: 45px;
+        // margin-top: 15%;
     }
     p:first-child {
         font-size: 33.33px;
@@ -234,7 +287,7 @@ section {
         width: 199px;
         height: 44px;
         font-size: 16.67px;
-        margin: 40px 0 37px 0;
+        // margin: 15% 0 13.46% 0;
     }
     
 }
@@ -242,27 +295,40 @@ section {
 .bottom-content {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex: 1 0 auto;
     max-width: 74%;
-    height: 100%;
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        input {
-            width: 100%;
-            height: 56px;
-            @include UseableElem(1);
-            font-size: 17px;
-            margin-bottom: 15px;
-            padding: 0 20px;
-            border-radius: 30px;
-        }
-        input[type="submit"] {
-            height: 62px; 
-            padding: 0;
-        }
+    // height: 100%;
+    height: 78.15%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    // height: 52.36%;
+    height: 50%;
+    input {
+        width: 100%;
+        // height: 21.05%;
+        height: 56px;
+        @include UseableElem(1);
+        font-size: 1.0625rem;
+        // margin-bottom: 15px;
+        margin-bottom: 5.64%;
+        padding: 0 20px;
+        border-radius: 30px;
+        // flex-grow: 1;
+    }
+    input[type="submit"] {
+        height: 62px; 
+        // height: 23.68%;
+        padding: 0;
+        // margin-bottom: 22.18%;
+        // margin-bottom: 17.9878%;
+        margin: 0;
+        // flex: 0 1 23.68%;
     }
 }
 
@@ -306,6 +372,56 @@ input::placeholder {
     display: none;
 }
 
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #000000, $alpha: 0.5);
+    display: none;
+    z-index: 10;
+}
+
+.modal-content {
+    display: flex;
+    width: 90%; 
+    padding: 15px;
+    // background-color: rgba($color: #000000, $alpha: 0);
+    background-image: url("./images/фонФорма.png");
+    border: 2px solid white;
+    border-radius: 15%;
+}
+
+.modalCaller {
+    @include button(30px);
+    position: absolute;
+    bottom: 5.3%;
+    height: 62px;
+    display: none;
+    width: 87.5%;
+    max-width: 328px;
+    margin: 0;
+    
+}
+
+.close {
+    // border-radius: 50%;
+    // border: 2px solid black;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    @include button(19px);
+    border: 1px solid black;
+    // height: 30px;
+    // width: 30px;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+}
 
 @media(min-width:2560px) {
 
@@ -329,117 +445,140 @@ input::placeholder {
     }
 }
 
-// @media (max-width: 1900px) {
+@media (max-width: 1800px) {
+
+    html {
+        font-size: 13px;
+    }
+
+    .top {
+        justify-content: center;
+        a {
+            width: 179px;
+        }
+    }
+}
+
+@media(max-width: 1100px) {
+
+    section {
+        width: auto;
+        flex-grow: 1;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 992px) {
     
-//     section {
-//         width: 100%;
-//         padding: 40px;
-//         max-width: 100%;
-//         flex-direction: column;
-//         justify-content: flex-start;
-//         align-items: center;
-//     }
+    .modalCaller {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-//     .leftSide {
-//         width: 100%;
-//     }
+    #modal:target {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-//     .logo {
-//         background-image: url("images/logoSmall.png");
-//         width: 136px;
-//         height: 105px;
-//         position: absolute;
-//         margin: 0;
-//     }
+    @mixin AutoSize() {
+        max-width: none;
+        max-height: none;
+        min-width: auto;
+        min-height: auto;
+    }
 
-//     .info {
+    .leftLeaf, .rightLeaf, .bigLeftLeaf, .youtube, .rightSide {
+        display: none;
+    }
 
-//         border: 0;
-//         background: 0;
-//         width: 100%;
-//         height: auto;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: flex-start;
-//         flex-grow: 1;
-//     }
+    html {
+        font-size: 14px;
+    }
 
-//     .firstText, .secondText {
+    .main {
+        align-items: center;
+    }
 
-//         flex: 0 2 auto;
-//         max-width: 70%;
-//         min-width: 1px;
-//         margin-left: 0;
-//     }
+    section {
+        margin: 0;
+        justify-content: center;
+        align-items: flex-start;
+    }
 
-//     .links {
-//         order: -1;
-//         align-self: flex-end;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: flex-end;
-//         justify-content: space-between;
-//         height: 140px;
-//     }
+    .leftSide {
+        width: 90%;
+        height: 40%;
+        flex: none;
+        margin-top: 40px;
+        position: relative;
+    }
 
-//     .slider {
-//         position: absolute;
-//         right: 0px;
-//         max-height: 40vh;
-//         max-width: 350px;
-//         // height: 50vh;
-//         // width: 375px !important;
-//         img {
-//             // width: 375px !important;
-//             // height: 537px !important;
-//             // height: 50vh;
-//         }
-//         .carousel-inner {
-//             > div:nth-child(3) {
-//                 display: none;
-//             }
-//         }
-//     }
+    .logo {
+        background-image: url("images/logoSmall.png");
+        position: absolute;
+        width: 136px;
+        height: 105px;
+        margin: 0;
+    }
 
-//     .form {
-//         border: 0;
-//         background: 0;
-//         width: auto;
-//         height: auto;
-//         align-self: center;
-//         position: absolute;
-//         bottom: 40px;
-//         > *:not(.inner-form) {
-//             display: none;
-//         }
-//     }
+    .info {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: none;
+        border: none;
+        @include AutoSize();
+    }
+
+    .info-content {
+        @include UseableElem(1);
+        height: 100%;
+        width: 100%;
+        flex: auto;
+    }
+
+    .info-content-top {
+        width: 60%;
+    }
+
+    .firstText, .secondText {
+        font-size: 1rem;
+        color: black;
+    }
+
+    .links {
+        order: -1;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 83px;
+        a {
+            height: 37px;
+        }
+    }
     
-//     .inner-form {
-//         border: 0;
-//         width: auto;
-//         height: auto;
-//         > *:not(div) {
-//             display: none;
-//         }
-//         > div {
-//             margin: 0;
-//             > *:not(.submit) {
-//                 display: none;
-//             }
-//             > a {
-//                 padding: 0;
-//                 padding-left: 0px;
-//                 box-shadow: $boxShadow;
-//                 width: 375px;
-//                 height: 56px;
-//             }
-//         }
-//     }
+    .viber {
+        width: 189px;
+        flex: 0 1 auto;
+    }
 
-//     .leftLeaf, .bigLeftLeaf, .rightLeaf, .youtube {
-//         display: none;
-//     }
-// }
+    .vk {
+        width: 142px;
+        flex: 0 1 auto;
+    }
+
+    .slider {
+        top: 100px;
+        right: 0;
+        width: 100%;
+        max-width: 375px;
+        // height: 540px;
+        height: 80%;
+        max-height: 540px;
+    }
+}
 
 // @media (max-width: 600px) {
 
