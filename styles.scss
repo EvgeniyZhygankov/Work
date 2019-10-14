@@ -192,7 +192,7 @@ section {
             flex: 1 1;
         }
         img {
-            margin-right: 7px;
+            margin-right: 3.175%;
             height: 75.81%;
         }
     }
@@ -508,6 +508,8 @@ input::placeholder {
     }
 
     .leftSide {
+        min-width: 327px;
+        min-height: 266px;
         width: 90%;
         height: 40%;
         flex: none;
@@ -570,7 +572,8 @@ input::placeholder {
     }
 
     .slider {
-        top: 100px;
+        // top: 100px;
+        top: 20%;   
         right: 0;
         width: 100%;
         max-width: 375px;

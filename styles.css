@@ -224,7 +224,7 @@ section {
 }
 
 .links a img {
-  margin-right: 7px;
+  margin-right: 3.175%;
   height: 75.81%;
 }
 
@@ -679,6 +679,8 @@ input::placeholder {
             align-items: flex-start;
   }
   .leftSide {
+    min-width: 327px;
+    min-height: 266px;
     width: 90%;
     height: 40%;
     -webkit-box-flex: 0;
@@ -753,7 +755,7 @@ input::placeholder {
             flex: 0 1 auto;
   }
   .slider {
-    top: 100px;
+    top: 20%;
     right: 0;
     width: 100%;
     max-width: 375px;
