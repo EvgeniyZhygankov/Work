@@ -97,7 +97,7 @@ body, html, .main {
 }
 
 .main {
-    background-image: url("./images/фон2560.png");
+    background-image: url(images/2560-bg.png);
     background-position: center top;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -262,7 +262,7 @@ section {
     // min-height: 397px;
     height: 59.2vh;
     width: 100%;
-    background-image: url("./images/фонФорма.png");
+    background-image: url(images/form-bg.png);
     background-position: top left;
     background-size: 100% 100%;
     border-bottom-right-radius: 40px;
@@ -431,7 +431,7 @@ input::placeholder {
     width: 90%; 
     padding: 15px;
     // background-color: rgba($color: #000000, $alpha: 0);
-    background-image: url("./images/фонФорма.png");
+    background-image: url(images/form-bg.png);
     border: 2px solid white;
     border-radius: 15%;
 }
@@ -563,7 +563,7 @@ input::placeholder {
     }
 
     .logo {
-        background-image: url("images/logoSmall.png");
+        background-image: url(images/logoSmall.png);
         position: absolute;
         width: 136px;
         height: 105px;
